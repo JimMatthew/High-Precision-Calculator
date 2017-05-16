@@ -2,4 +2,4 @@
 
 This is a high (effectively infinite) precision calculator written in Java. 
 
-![Example: Java Calculator](Screenshots/calc.png)
+![Example: Java Calculator](Screenshots/calc.PNG)
