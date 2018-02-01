@@ -25,20 +25,17 @@ public class calcMachine {
 	
 	public void addOperation(String num)
 	{
-		hold = new BigDecimal(num);
-		value = value.add(hold);
+		value = value.add(new BigDecimal(num));
 	}
 	
 	public void subtractOperation(String num)
 	{
-		hold = new BigDecimal(num);
-		value = value.subtract(hold);
+		value = value.subtract(new BigDecimal(num));
 	}
 	
 	public void multiplyOperation(String num)
 	{
-		hold = new BigDecimal(num);
-		value = value.multiply(hold);
+		value = value.multiply(new BigDecimal(num));
 	}
 	
 	public void squareOperation()
@@ -48,20 +45,17 @@ public class calcMachine {
 	
 	public void divideOperation(String num)
 	{
-		hold = new BigDecimal(num);
-		value = value.divide(hold,18, RoundingMode.HALF_UP);
+		value = value.divide(new BigDecimal(num),18, RoundingMode.HALF_UP);
 	}
 	
 	public void powerOperation(String num)
 	{
-		int pow = Integer.parseInt(num);
-		value = value.pow(pow);
+		value = value.pow(Integer.parseInt(num));
 	}
 	
 	public void squareRootOperation()
 	{
-		hold = value;
-		value = sqrt(hold, 10);
+		value = sqrt(value, 10);
 	}
 	public String getTotalString()
 	{
@@ -72,8 +66,6 @@ public class calcMachine {
 	{
 		DecimalFormat f = new DecimalFormat("###,###.#################");
 		String string = f.format(value);
-		
-		System.out.println(String.format("%X", value.toBigInteger()));
 		return string;
 	}
 	
@@ -84,7 +76,6 @@ public class calcMachine {
 	
 	public void factorialOperation()
 	{
-		hold = value;
 		value = fac(value, value);	        
 	}
 
